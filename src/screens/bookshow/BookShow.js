@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../common/header/Header";
 import Typography from "@material-ui/core/Typography";
 import "./BookShow.css";
 import Card from "@material-ui/core/Card";
@@ -193,7 +192,7 @@ const BookShow = (props) => {
 
   return (
     <div>
-      <Header baseUrl={props.baseUrl} />
+      {/* <Header baseUrl={props.baseUrl} /> */}
       <div className="bookShow">
         <Typography className="back">
           <Link to={"/movie/" + props.match.params.id}>
@@ -285,9 +284,7 @@ const BookShow = (props) => {
             <br />
             <Typography>Unit Price: Rs. {unitPrice}</Typography>
             <br />
-            <Typography>
-              Total Price: Rs. {unitPrice * tickets}
-            </Typography>
+            <Typography>Total Price: Rs. {unitPrice * tickets}</Typography>
             <br />
             <br />
             <Button
